@@ -2,14 +2,38 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1>{{ title }}</h1>
 
-{{ content | safe }}
+<article class="hentry singlepost entry-1">
+  <h2>{{title}}</h2>
+  <small class="published">{{humanDate}}</small>
+  {{ content | safe }}
 
-<hr>
+</article>
+
+
+
+
+
+
+
+
+<section class="commentarea">
+  <h3 id="comments">{{comments.length}} комментариев к &#8220;{{title}}&#8221;</h3>
+
+  <dl class="commentlist">
+    {% for comment in comments %}
+      <dt><strong><a href="#{{comment.id}}" id="#{{comment.id}}">{{loop.index}}.</a></strong><a href="{{comment.url}}">{{comment.author}}</a> | <em>{{comment.humandate}}</em> </dt>
+      <dd>
+        {{comment.content | safe}}
+      </dd>
+    {% endfor %}
+</dl>
+
 <ul>
   {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
   {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
+</section>
+

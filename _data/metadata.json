@@ -1,20 +1,20 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://example.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "CSSing – Блог про CSS и все что с этим связано. Новые приемы и технологии и т д.",
+  "url": "https://cssing.org.ua/",
+  "description": "Блог про CSS и все что с этим связано. Новые приемы и технологии и т д.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Блог про CSS и все что с этим связано. Новые приемы и технологии и т д.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://example.com/"
+    "id": "https://cssing.org.ua/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
     "url": "https://example.com/feed/feed.json"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "name": "Yuri Artiukh",
+    "email": "akella.a@gmail.com",
+    "url": "https://cssing.org.ua/about/"
   }
 }
